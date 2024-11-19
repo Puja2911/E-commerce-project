@@ -253,4 +253,156 @@ hr{
 #details>div{
     margin-top: 1VH;
 }
+/* review section */
+.review-container {
+    max-width: 1200px;
+    padding: 15px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
 
+.customer-reviews {
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.customer-reviews h2 {
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.review-card {
+    background: #fff;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.verified-badge {
+    background: #27ae60;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.review-rating {
+    margin-left: auto;
+    color: #f1c40f;
+}
+
+.review-content {
+    color: #34495e;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.review-images {
+    display: flex;
+    gap: 8px;
+}
+
+.review-images img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.write-review {
+    max-width: 400px;
+}
+
+.write-review h2 {
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #e1e8ed;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 24px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: #f1c40f;
+}
+
+.image-upload {
+    margin: 10px 0;
+}
+
+.image-upload input[type="file"] {
+    display: none;
+}
+
+.image-upload label {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #f8f9fa;
+    border: 1px solid #e1e8ed;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #2980b9;
+}
