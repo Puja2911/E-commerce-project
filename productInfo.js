@@ -1,3 +1,103 @@
+function openModal() {
+    document.getElementById('customizeModal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('customizeModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  function selectColor(element) {
+    // Remove selected class from all color options
+    document.querySelectorAll('.color-option').forEach(option => {
+      option.classList.remove('selected');
+    });
+    // Add selected class to clicked option
+    element.classList.add('selected');
+  }
+
+  // Close modal when clicking outside
+  window.onclick = function(event) {
+    if (event.target == document.getElementById('customizeModal')) {
+      closeModal();
+    }
+  }
+
+  // Handle form submission
+  document.getElementById('customizeForm').onsubmit = function(e) {
+    e.preventDefault();
+    // Add your form submission logic here
+    closeModal();
+  }
+
+  // File upload preview
+  document.getElementById('designFile').onchange = function(e) {
+    const file = e.target.files[0];
+    if (file) {
+      // Add your file handling logic here
+      const fileName = file.name;
+      e.target.parentElement.querySelector('p').textContent = `Selected file: ${fileName}`;
+    }
+  }
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.purchase-tab');
+    
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active class from all tabs
+            tabs.forEach(t => t.classList.remove('active'));
+            // Add active class to clicked tab
+            tab.classList.add('active');
+            
+            // Hide all content sections
+            document.querySelectorAll('.purchase-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Show selected content
+            const contentId = tab.getAttribute('data-tab') + '-content';
+            document.getElementById(contentId).classList.add('active');
+        });
+    });
+});
+
+// Rental price calculator
+function updateRentalPrice() {
+    const monthlyRate = 999;
+    const months = parseInt(document.getElementById('rental-period').value);
+    const totalAmount = monthlyRate * months;
+    
+    document.querySelector('.total-rent').textContent = 
+        `Total Rental Amount: ₹${totalAmount.toLocaleString()}`;
+}
+
+// Add hover effects for buttons
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('mouseover', function() {
+        this.style.opacity = '0.9';
+    });
+    
+    button.addEventListener('mouseout', function() {
+        this.style.opacity = '1';
+    });
+});
+
+// Animate price changes
+function animateValue(element, start, end, duration) {
+    const range = end - start;
+    const increment = range / (duration / 16);
+    let current = start;
+    
+    const timer = setInterval(function() {
+        current += increment;
+        element.textContent = Math.floor(current);
+        if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+            clearInterval(timer);
+            element.textContent = end;
+        }
+    }, 16);
+}
 var count = 0;
   
 
