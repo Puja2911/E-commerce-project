@@ -538,117 +538,201 @@
                     <div id="brand-name-and-tag">
                         <div id="brand-name">CasaCraft by Pepperfry</div>
                         <div id="fulfilled-tag">
-                            <img src="https://ii1.pepperfry.com/images/svg/pf-fulfilled-truck-icon.svg" alt="">
+                            <img src="https://ii1.pepperfry.com/images/svg/pf-fulfilled-truck-icon.svg" alt="Pepperfry Fulfilled">
                             <span>Pepperfry Fulfilled</span>
                         </div>
                     </div>
-                    <div id="offer-price-wrap">
-                        <span id="rupee-sign" class="red">₹</span>
-                        <span id="price" class="red">21,999</span>
-                        <span id="mrp-price" class="color969696">₹ <span id="cutPrice"> 35,999 </span>MRP</span>
-                        <span class="color969696">(Inclusive of all taxes)</span>
+                
+                    <div class="purchase-type-tabs">
+                        <button class="purchase-tab active" data-tab="buy">Buy</button>
+                        <button class="purchase-tab" data-tab="rent">Rent</button>
                     </div>
-                    <div id="total-saving">
-                        <div id="saving-wrap">
-                            <span class="color969696">Total Savings &nbsp;</span>
-                            <span class="fw" ><b>₹ 14,000 (39% Off)</b></span>
+                
+                    <!-- Buy section -->
+                    <div class="purchase-content active" id="buy-content">
+                        <div id="offer-price-wrap">
+                            <span id="rupee-sign" class="red">₹</span>
+                            <span id="price" class="red">21,999</span>
+                            <span id="mrp-price" class="color969696">₹ <span id="cutPrice">35,999</span> MRP</span>
+                            <span class="color969696">(Inclusive of all taxes)</span>
+                            <button class="customize-btn" onclick="openModal()">
+                                <svg class="customize-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                                </svg>
+                                Customize
+                            </button>
                         </div>
-                    </div>
-                    <div id="promo-img">
-                        <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/Web_VIPCoupon_EndingSoon_2x_13721.jpg" alt="">
-                    </div>
-                    <hr>
-                    <div id="emi-warranty">
-                        <div id="row-emi"> 
-                            <div class="wrap">
-                                <div class="wrap-div1"><img src="	https://ii1.pepperfry.com/images/svg/w20-calender-icon.svg" alt=""></div>
-                                <div class="wrap-div2">
-                                    <span>EMI from ₹ 1,036 </span><br>
-                                    <span>No Cost EMI</span>
+                
+                        <div id="total-saving">
+                            <div id="saving-wrap">
+                                <span class="color969696">Total Savings &nbsp;</span>
+                                <span class="fw"><b>₹ 14,000 (39% Off)</b></span>
+                            </div>
+                        </div>
+                
+                        <div id="promo-img">
+                            <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/Web_VIPCoupon_EndingSoon_2x_13721.jpg" alt="Promo Banner">
+                        </div>
+                
+                        <hr>
+                
+                        <div id="emi-warranty">
+                            <div id="row-emi">
+                                <div class="wrap">
+                                    <div class="wrap-div1">
+                                        <img src="https://ii1.pepperfry.com/images/svg/w20-calender-icon.svg" alt="EMI">
+                                    </div>
+                                    <div class="wrap-div2">
+                                        <span>EMI from ₹ 1,036</span><br>
+                                        <span>No Cost EMI</span>
+                                    </div>
+                                </div>
+                                <div class="wrap">
+                                    <div class="wrap-div1">
+                                        <img src="https://ii1.pepperfry.com/images/svg/w20-warranty-icon.svg" alt="Warranty">
+                                    </div>
+                                    <div class="wrap-div2">
+                                        <span>36 Months</span><br>
+                                        <span>Warranty</span>
+                                    </div>
+                                </div>
+                                <div class="wrap">
+                                    <div class="wrap-div1">
+                                        <img src="https://ii1.pepperfry.com/images/svg/w20-returns-icon.svg" alt="Returns">
+                                    </div>
+                                    <div class="wrap-div2">
+                                        <span>Easy</span><br>
+                                        <span>Returns</span>
+                                    </div>
+                                </div>
+                                <div class="wrap">
+                                    <div class="wrap-div1">
+                                        <img src="https://ii1.pepperfry.com/images/svg/w21-safe-delivery.svg" alt="Safe Delivery">
+                                    </div>
+                                    <div class="wrap-div2">
+                                        <span>Safe</span><br>
+                                        <span>Delivery</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="wrap">
-                                <div class="wrap-div1"><img src="	https://ii1.pepperfry.com/images/svg/w20-warranty-icon.svg" alt=""></div>
-                                <div class="wrap-div2">
-                                    <span>36 Months </span><br>
-                                    <span>Warranty</span>
+                        </div>
+                
+                        <hr>
+                
+                        <div id="product-offer-section">
+                            <div id="product-offer-label">
+                                <span class="black">More Offers</span>
+                            </div>
+                            <div id="product-offer-list">
+                                <div>
+                                    <span class="fw">HDFC EMI</span><br>
+                                    <span>Get Extra Rs.1,500 Off on HDFC EMI Purchases of Rs.10,000 and Above.<br>Code:</span>
+                                    <span class="black">HDFCPF1500</span>
+                                </div>
+                                <div>
+                                    <span class="fw">HDFC Bank Credit Card</span><br>
+                                    <span>Get Extra Rs.1,000 Off on Purchases through HDFC Credit Card. Applicable on Orders Above Rs.10,000<br>Code:</span>
+                                    <span class="black">HDFCPF1000</span>
+                                </div>
+                                <div>
+                                    <span class="fw">No Cost EMI</span><br>
+                                    <span>Get up to 6 months EMI with 0% interest rate</span>
                                 </div>
                             </div>
-                            <div class="wrap">
-                                <div class="wrap-div1"><img src="	https://ii1.pepperfry.com/images/svg/w20-returns-icon.svg" alt=""></div>
-                                <div class="wrap-div2">
-                                    <span>Easy</span><br>
-                                    <span>Returns</span>
+                        </div>
+                
+                        <div id="cart-and-buy">
+                            <div onclick="storeProduct()" id="add-to-cart">ADD TO CART</div>
+                            <div onclick="checkout()" id="buy-now">BUY NOW</div>
+                        </div>
+                
+                        <hr>
+                
+                        <div id="delivery-section">
+                            <div id="delivery-label" class="black">Delivery</div>
+                            <div id="delivery-details-wrap">
+                                <div id="pincode">
+                                    <input type="text" placeholder="Pincode">
+                                    <span class="fw">Apply</span>
+                                </div>
+                                <div id="pincode-details">
+                                    <span class="grey">Enter Pincode to get Delivery Date, Assembly Information and other details</span><br>
+                                    <span class="black">Delivery & Assembly Charges Extra. Enter Pincode to Know</span>
                                 </div>
                             </div>
-                            <div class="wrap">
-                                <div class="wrap-div1"><img src="	https://ii1.pepperfry.com/images/svg/w21-safe-delivery.svg" alt=""></div>
-                                <div class="wrap-div2">
-                                    <span>Safe </span> <br>
-                                    <span>Delivery</span>
+                        </div>
+                
+                        <hr>
+                
+                        <div id="product-details">
+                            <div id="label" class="black">Details</div>
+                            <div id="details">
+                                <div><span class="black">Brand:&nbsp;</span><span class="grey">CasaCraft</span></div>
+                                <div><span class="black">Dimensions:&nbsp;</span><span class="grey">H 34.5 x W 31 x D 31; Seating Height-18.5 (All Dimension in Inches)</span></div>
+                                <div><span class="black">Weight:&nbsp;</span><span class="grey">21.5 KG</span></div>
+                                <div><span class="black">Warranty:&nbsp;</span><span class="grey">36 Months' Warranty</span></div>
+                                <div><span class="black">Assembly:&nbsp;</span><span class="grey">No Assembly Required</span></div>
+                                <div><span class="black">Primary Material:&nbsp;</span><span class="grey">Fabric</span></div>
+                                <div><span class="black">Room Type:&nbsp;</span><span class="grey">Living Room</span></div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Rent Section -->
+                    <div class="purchase-content" id="rent-content">
+                        <div class="rent-options">
+                            <div class="price-section">
+                                <span class="price">₹999/month</span>
+                                <span class="mrp">₹1,499/month</span>
+                            </div>
+                
+                            <div class="rent-calculator">
+                                <div class="rent-duration">
+                                    <label for="rental-period">Select Rental Period:</label>
+                                    <select id="rental-period" onchange="updateRentalPrice()">
+                                        <option value="3">3 Months Rental</option>
+                                        <option value="6">6 Months Rental</option>
+                                        <option value="12">12 Months Rental</option>
+                                    </select>
+                                </div>
+                                <div class="total-rent">
+                                    Total Rental Amount: ₹2,997
                                 </div>
                             </div>
-                            
+                
+                            <div class="security-deposit">
+                                Refundable Security Deposit: ₹2,999
+                                <div style="font-size: 0.9em; margin-top: 5px;">
+                                    *Fully refundable within 7 days after return
+                                </div>
+                            </div>
+                
+                            <div class="rental-benefits">
+                                <h3>Rental Benefits</h3>
+                                <div class="benefit-item">Free maintenance and repairs</div>
+                                <div class="benefit-item">Option to buy at any time</div>
+                                <div class="benefit-item">Easy returns and upgrades</div>
+                                <div class="benefit-item">Free relocation support</div>
+                            </div>
                         </div>
-                    </div>
-                    <hr> 
-                    <div id="product-offer-section">
-                        <div id="product-offer-label"><span class="black">More Offers</span></div>
-                        <div id="product-offer-list">
-                            <div>
-                                <span class="fw">HDFC EMI</span><br>
-                                <span> Get Extra Rs.1,500 Off on HDFC EMI Purchases of Rs.10,000 and Above.<br>Code:</span>
-                                <span class="black">HDFCPF1500</span> 
-                            </div>
-                            <div>
-                                <span class="fw">HDFC Bank Credit Card</span><br>
-                                <span> Get Extra Rs.1,000 Off on Purchases through HDFC Credit Card. Applicable on Orders Above Rs.10,000<br>Code:</span>
-                                <span class="black">HDFCPF1000</span> 
-                            </div>
-                            <div>
-                                <span class="fw">No Cost EMI</span><br>
-                                <span>Get up to 6 months EMI with 0% interest rate</span> 
-                            </div> 
+                
+                        <div class="action-buttons">
+                            <button class="btn btn-cart">Book Now</button>
+                            <button class="btn btn-customize">Schedule Visit</button>
                         </div>
-                    </div>
-                    <div id="cart-and-buy">
-                        <!-- add to cart box --> 
-                        <!-- one button 2 functionality -->
-                        <!-- click second time in add to cart box to go to checkout -->
-                        <div onclick="storeProduct()" id="add-to-cart">ADD TO CART</div>
-
-                         <!-- buy Now box   -->
-                         <!-- show product function will take us to checkout  --> 
-                        <div onclick="checkout()" id="buy-now">BUY NOW</div>
-                    </div>
-                    <hr>
-                    <div id="delivery-section">
-                        <div id="delivery-label" class="black ">Delivery</div>
-                        <div id="delivery-details-wrap">
-                            <div id="pincode">
-                                <input type="text" placeholder="Pincode">
-                                <span class="fw">Apply</span>
+                
+                        <div class="features">
+                            <div class="feature">
+                                <span>36 Months Warranty</span>
                             </div>
-                            <div id="pincode-details">
-                                 <span class="grey">Enter Pincode to get Delivery Date, Assembly Information and other details</span><br>
-                                <span class="black">Delivery & Assembly Charges Extra. Enter Pincode to Know
-                                </span>
+                            <div class="feature">
+                                <span>Easy Returns</span>
+                            </div>
+                            <div class="feature">
+                                <span>Safe Delivery</span>
                             </div>
                         </div>
                     </div>
-                    <hr>
-                    <div id="product-details">
-                        <div id="label" class="black">Details</div>
-                        <div id="details">
-                            <div><span class="black">Brand:&nbsp;</span><span class="grey">CasaCraft</span></div> 
-                            <div><span class="black">Dimensions:&nbsp;</span><span class="grey"> H 34.5 x W 31 x D 31; Seating Height-18.5 (All Dimension in Inches)</span></div> 
-                            <div><span class="black">Weight:&nbsp;</span><span class="grey">21.5 KG</span></div> 
-                            <div><span class="black">Warranty:&nbsp;</span><span class="grey">36 Months' Warranty</span></div> 
-                            <div><span class="black">Assembly:&nbsp;</span><span class="grey">No Assembly Required</span></div> 
-                            <div><span class="black">Primary Material:&nbsp;</span><span class="grey">Fabric</span></div> 
-                            <div><span class="black">Room Type:&nbsp;</span><span class="grey">Living Room</span></div> 
-                        </div>
-                    </div>  
                 </div>
             </div>
         </div> 
@@ -884,7 +968,86 @@
             </div> 
         </div>  
     </div>
+    <div id="customizeModal" class="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Customize Your Sofa</h2>
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+      </div>
 
+      <form id="customizeForm">
+        <div class="form-group">
+          <label>Color</label>
+          <div class="color-options">
+            <div class="color-option" style="background: #333333;" onclick="selectColor(this)" data-color="Charcoal Grey"></div>
+            <div class="color-option" style="background: #8B4513;" onclick="selectColor(this)" data-color="Brown"></div>
+            <div class="color-option" style="background: #1B4D3E;" onclick="selectColor(this)" data-color="Forest Green"></div>
+            <div class="color-option" style="background: #151B54;" onclick="selectColor(this)" data-color="Navy Blue"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Upholstery Material</label>
+          <select class="form-control">
+            <option>Velvet</option>
+            <option>Fabric</option>
+            <option>Leather</option>
+            <option>Microfiber</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Finish Type</label>
+          <select class="form-control">
+            <option>Polished</option>
+            <option>Glossy</option>
+            <option>Textured</option>
+            <option>Matte</option>
+            <option>Rustic</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Dimensions</label>
+          <div class="dimension-group">
+            <div class="dimension-input">
+              <label>Width (cm)</label>
+              <input type="number" class="form-control" min="0">
+            </div>
+            <div class="dimension-input">
+              <label>Height (cm)</label>
+              <input type="number" class="form-control" min="0">
+            </div>
+            <div class="dimension-input">
+              <label>Depth (cm)</label>
+              <input type="number" class="form-control" min="0">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Living Area Type</label>
+          <select class="form-control">
+            <option>Bedroom</option>
+            <option>Living Room</option>
+            <option>Study Room</option>
+            <option>Home Office</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Upload Design Reference (Optional)</label>
+          <div class="file-upload" onclick="document.getElementById('designFile').click()">
+            <input type="file" id="designFile" hidden accept="image/*">
+            <p>Click to upload or drag and drop</p>
+            <p style="color: #666; font-size: 0.9rem;">Supported formats: JPG, PNG</p>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Apply Customization</button>
+      </form>
+    </div>
+  </div>
 </footer>
 
 </html>
